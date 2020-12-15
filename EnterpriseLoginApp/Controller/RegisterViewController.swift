@@ -26,8 +26,8 @@ class RegisterViewController: UIViewController {
         usernameTextField.delegate = self
         passwordTextField.delegate = self
         confirmPassWordTextField.delegate = self
-//        passwordTextField.isSecureTextEntry = true
-//        confirmPassWordTextField.isSecureTextEntry = true
+        passwordTextField.isSecureTextEntry = true
+        confirmPassWordTextField.isSecureTextEntry = true
         registerButton.layer.cornerRadius = 15
         usernameTextField.layer.borderWidth = 1
         usernameTextField.layer.cornerRadius = 15
@@ -89,7 +89,7 @@ class RegisterViewController: UIViewController {
         else {
             UserDefaults.standard.set(username, forKey: "username")
             UserDefaults.standard.set(password, forKey: "password")
-            let alert:UIAlertController = UIAlertController(title: "Successfully", message: "", preferredStyle: .alert)
+            let alert:UIAlertController = UIAlertController(title: "Successfully", message: "Create account successfully", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
             present(alert,animated: true, completion: nil)
         }

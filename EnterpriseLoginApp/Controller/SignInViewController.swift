@@ -25,6 +25,7 @@ class SignInViewController: UIViewController {
     fileprivate func setUp() {
         usernameTextField.delegate = self
         passwordTextField.delegate = self
+        passwordTextField.isSecureTextEntry = true
         signinButton.layer.cornerRadius = 15
         usernameTextField.layer.borderWidth = 1
         usernameTextField.layer.cornerRadius = 15
@@ -56,7 +57,7 @@ class SignInViewController: UIViewController {
         }
         if username == UserDefaults.standard.string(forKey: "username") {
             if password == UserDefaults.standard.string(forKey: "password") {
-                let alert:UIAlertController = UIAlertController(title: "Logged in successfully", message: "", preferredStyle: .alert)
+                let alert:UIAlertController = UIAlertController(title: "Login successfully", message: "", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
                 present(alert,animated: true, completion: nil)
             }
