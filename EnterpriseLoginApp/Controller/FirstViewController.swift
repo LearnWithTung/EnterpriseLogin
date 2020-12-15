@@ -15,7 +15,7 @@ class FirstViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        overrideUserInterfaceStyle = .dark
+        view.backgroundColor = .black
         stackView.layer.cornerRadius = 15
         registerButton.layer.cornerRadius = 15
         signInButton.layer.cornerRadius = 15
@@ -30,13 +30,11 @@ class FirstViewController: UIViewController {
     }
     
     @IBAction func handelRegisterButton(_ sender: Any) {
-//        let vc = RegisterViewController()
-//        self.navigationController?.pushViewController(vc, animated: false)
+        
     }
     
     @IBAction func handelSignInButton(_ sender: Any) {
-//        let vc = FirstViewController()
-//        navigationController?.pushViewController(vc, animated: true)
+        
     }
     
 }

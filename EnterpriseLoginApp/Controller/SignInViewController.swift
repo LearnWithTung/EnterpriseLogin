@@ -17,7 +17,7 @@ class SignInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        overrideUserInterfaceStyle = .dark
+        view.backgroundColor = .black
         setUp()
         dismissKeyboard()
     }
@@ -50,7 +50,27 @@ class SignInViewController: UIViewController {
     }
     
     @IBAction func handelSiginButton(_ sender: Any) {
-        
+        guard let username = usernameTextField.text, !username.isEmpty,
+            let password = passwordTextField.text, !password.isEmpty else {
+                return
+        }
+        if username == UserDefaults.standard.string(forKey: "username") {
+            if password == UserDefaults.standard.string(forKey: "password") {
+                let alert:UIAlertController = UIAlertController(title: "Logged in successfully", message: "", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+                present(alert,animated: true, completion: nil)
+            }
+            else {
+                let alert:UIAlertController = UIAlertController(title: "Wrong password", message: "", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+                present(alert,animated: true, completion: nil)
+            }
+        }
+        else {
+            let alert:UIAlertController = UIAlertController(title: "Wrong username", message: "", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+            present(alert,animated: true, completion: nil)
+        }
     }
     
 }

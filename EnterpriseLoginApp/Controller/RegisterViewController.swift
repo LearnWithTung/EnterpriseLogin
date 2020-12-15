@@ -17,7 +17,7 @@ class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        overrideUserInterfaceStyle = .dark
+        view.backgroundColor = .black
         setUp()
         dismissKeyboard()
     }
@@ -26,6 +26,8 @@ class RegisterViewController: UIViewController {
         usernameTextField.delegate = self
         passwordTextField.delegate = self
         confirmPassWordTextField.delegate = self
+//        passwordTextField.isSecureTextEntry = true
+//        confirmPassWordTextField.isSecureTextEntry = true
         registerButton.layer.cornerRadius = 15
         usernameTextField.layer.borderWidth = 1
         usernameTextField.layer.cornerRadius = 15
@@ -36,7 +38,7 @@ class RegisterViewController: UIViewController {
         confirmPassWordTextField.layer.borderWidth = 1
         confirmPassWordTextField.layer.cornerRadius = 15
         confirmPassWordTextField.layer.borderColor = UIColor.white.cgColor
-        avatarImage.layer.cornerRadius = avatarImage.frame.width/2
+        avatarImage.layer.cornerRadius = avatarImage.frame.height/2
         navigationController?.navigationBar.barTintColor = .black
         navigationController?.navigationBar.isTranslucent = false
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "arrow.turn.up.left"), style: .plain, target: self, action: #selector(handelBackBarButtonItem))
@@ -74,14 +76,23 @@ class RegisterViewController: UIViewController {
     }
     
     @IBAction func handelRegisterButton(_ sender: Any) {
-        let username = usernameTextField.text
-        let password = passwordTextField.text
-        UserDefaults.standard.set(username, forKey: "username")
-        UserDefaults.standard.set(password, forKey: "password")
-        
-        let alert:UIAlertController = UIAlertController(title: "Success", message: "", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
-        present(alert,animated: true, completion: nil)
+        guard let username = usernameTextField.text, !username.isEmpty,
+            let password = passwordTextField.text, !password.isEmpty,
+            let confirmpassword = confirmPassWordTextField.text, !confirmpassword.isEmpty else {
+                return
+        }
+        if password != confirmpassword {
+            let alert:UIAlertController = UIAlertController(title: "Those passwords didn't match. Try again.", message: "", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+            present(alert,animated: true, completion: nil)
+        }
+        else {
+            UserDefaults.standard.set(username, forKey: "username")
+            UserDefaults.standard.set(password, forKey: "password")
+            let alert:UIAlertController = UIAlertController(title: "Successfully", message: "", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+            present(alert,animated: true, completion: nil)
+        }
         
     }
     
