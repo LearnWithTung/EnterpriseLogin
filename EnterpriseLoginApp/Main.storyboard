@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="A9k-K3-yGz">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -36,6 +37,7 @@
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="0Kt-GR-k7N" secondAttribute="bottom" constant="1" id="Dkl-KW-Ozd"/>
                                             <constraint firstItem="xzX-oH-Jl7" firstAttribute="centerX" secondItem="k0G-VM-kUe" secondAttribute="centerX" id="JJ8-Rr-voP"/>
+                                            <constraint firstItem="0Kt-GR-k7N" firstAttribute="top" secondItem="xzX-oH-Jl7" secondAttribute="bottom" constant="32" id="W9j-yo-G3b"/>
                                             <constraint firstItem="0Kt-GR-k7N" firstAttribute="leading" secondItem="k0G-VM-kUe" secondAttribute="leading" constant="42" id="enN-cP-tb8"/>
                                             <constraint firstAttribute="trailing" secondItem="0Kt-GR-k7N" secondAttribute="trailing" constant="42" id="m2d-kU-9gL"/>
                                         </constraints>
@@ -400,7 +402,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KbL-T6-FJa"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.050980392156862744" green="0.050980392156862744" blue="0.050980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="DRl-Fq-nYz" firstAttribute="top" secondItem="TE1-Jv-LHV" secondAttribute="top" id="Wdh-nO-lfS"/>
                             <constraint firstAttribute="bottom" secondItem="DRl-Fq-nYz" secondAttribute="bottom" id="l3I-BG-s3C"/>
