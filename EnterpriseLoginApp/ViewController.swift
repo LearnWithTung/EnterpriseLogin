@@ -48,9 +48,9 @@ class BaseViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-//        self.navigationController?.navigationBar.backItem?.title = ""
-//        self.navigationController?.navigationBar.backIndicatorImage = #imageLiteral(resourceName: "icons8-reply-arrow-48 1")
-//        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = #imageLiteral(resourceName: "icons8-reply-arrow-48 1")
+        self.navigationController?.navigationBar.backItem?.title = ""
+        self.navigationController?.navigationBar.backIndicatorImage = #imageLiteral(resourceName: "icons8-reply-arrow-48 1")
+        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = #imageLiteral(resourceName: "icons8-reply-arrow-48 1")
         self.navigationController?.navigationBar.tintColor = .white
         self.navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.05098039216, green: 0.05098039216, blue: 0.05098039216, alpha: 1)          //0D0D0D
         self.navigationController?.navigationBar.isTranslucent = false

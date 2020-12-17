@@ -105,7 +105,8 @@ extension RegisterViewController: UINavigationControllerDelegate, UIImagePickerC
 
         let selectedImage = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
         
-        self.btnAvatar.isHidden = true
+//        self.btnAvatar.isHidden = true
+        self.btnAvatar.alpha = 1
         self.avatarImgView.isHidden = false
         self.avatarImgView.contentMode = .scaleAspectFill
         self.avatarImgView.image = selectedImage

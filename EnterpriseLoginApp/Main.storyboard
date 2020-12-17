@@ -145,7 +145,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R0i-lv-ad4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5114.4927536231889" y="-585.26785714285711"/>
+            <point key="canvasLocation" x="5384" y="-573"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="HXi-5z-xZB">
@@ -262,9 +262,9 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dY0-rV-zln">
-                                                <rect key="frame" x="142" y="127" width="130" height="130"/>
+                                                <rect key="frame" x="142" y="171.5" width="130" height="130"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="130" id="M6v-Xl-eXL"/>
+                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" priority="999" constant="130" id="M6v-Xl-eXL"/>
                                                     <constraint firstAttribute="width" secondItem="dY0-rV-zln" secondAttribute="height" multiplier="1:1" id="NMD-cq-7LZ"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
@@ -276,22 +276,23 @@
                                                 </connections>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qnA-aq-rUd">
-                                                <rect key="frame" x="142" y="127" width="130" height="130"/>
+                                                <rect key="frame" x="142" y="171.5" width="130" height="130"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="qnA-aq-rUd" secondAttribute="height" multiplier="1:1" id="C4a-9U-vYx"/>
-                                                    <constraint firstAttribute="height" constant="130" id="TYD-l3-0qc"/>
+                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" priority="999" constant="130" id="TYD-l3-0qc"/>
                                                 </constraints>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.050980392156862744" green="0.050980392156862744" blue="0.050980392156862744" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="qnA-aq-rUd" secondAttribute="bottom" constant="30" id="4ce-pX-bLG"/>
                                             <constraint firstItem="qVD-UA-pDf" firstAttribute="top" secondItem="uql-gq-T4S" secondAttribute="top" constant="20" id="DOv-ZC-1Nl"/>
                                             <constraint firstItem="qnA-aq-rUd" firstAttribute="centerX" secondItem="uql-gq-T4S" secondAttribute="centerX" id="IjV-Zb-Uf8"/>
                                             <constraint firstItem="qnA-aq-rUd" firstAttribute="top" secondItem="dY0-rV-zln" secondAttribute="top" id="KLu-BM-Y4w"/>
                                             <constraint firstItem="qVD-UA-pDf" firstAttribute="leading" secondItem="uql-gq-T4S" secondAttribute="leading" constant="24" id="Kby-4s-zSJ"/>
                                             <constraint firstItem="dY0-rV-zln" firstAttribute="centerX" secondItem="uql-gq-T4S" secondAttribute="centerX" id="cQH-Hl-Ck9"/>
-                                            <constraint firstItem="dY0-rV-zln" firstAttribute="top" secondItem="qVD-UA-pDf" secondAttribute="bottom" constant="35" id="dHH-Za-2Pa"/>
                                             <constraint firstAttribute="trailing" secondItem="qVD-UA-pDf" secondAttribute="trailing" constant="24" id="iB3-6T-uZe"/>
+                                            <constraint firstAttribute="bottom" secondItem="dY0-rV-zln" secondAttribute="bottom" constant="30" id="y6e-dZ-LGb"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MMp-S9-9JX">
@@ -421,7 +422,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dbe-Ge-xvK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5015.9420289855079" y="144.64285714285714"/>
+            <point key="canvasLocation" x="6422" y="127"/>
         </scene>
         <!--Sign In View Controller-->
         <scene sceneID="36f-qA-LIW">
@@ -592,7 +593,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1hk-Do-h0V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5786.9565217391309" y="-585.26785714285711"/>
+            <point key="canvasLocation" x="6423" y="-585"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="lXh-mN-EoM">

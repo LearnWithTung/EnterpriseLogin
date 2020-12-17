@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -25,7 +26,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window?.rootViewController = navigationController
         navigationController.navigationBar.backItem?.title = ""
 //
-        self.window?.makeKeyAndVisible()    }
+        self.window?.makeKeyAndVisible()
+        IQKeyboardManager.shared.enable = true
+        
+    }
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
