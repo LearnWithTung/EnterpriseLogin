@@ -15,10 +15,6 @@ class SignInViewController: BaseViewController {
         super.viewDidLoad()
         userNameTextField.delegate = self
         passwordTextField.delegate = self
-        
-        print(UserDefaults.standard.object(forKey: "username"))
-        
-        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -27,11 +23,11 @@ class SignInViewController: BaseViewController {
     
     @IBAction func signInPressed(_ sender: Any) {
         
+
+        guard let username = UserDefaults.standard.string(forKey: "username") else { return }
+        guard let password = UserDefaults.standard.string(forKey: "password") else { return }
         
-        guard let username = UserDefaults.standard.value(forKey: "username")  else { return }
-        guard let password = UserDefaults.standard.value(forKey: "password") else { return }
-        
-        if userNameTextField.text == username as! String && passwordTextField.text == password as! String {
+        if userNameTextField.text == username && passwordTextField.text == password {
             let alert = UIAlertController(title: "Login Succesfully", message: nil, preferredStyle: .alert)
             let successAction = UIAlertAction(title: "OK", style: .default, handler: nil)
             alert.addAction(successAction)

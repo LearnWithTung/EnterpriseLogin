@@ -36,9 +36,11 @@ class RegisterViewController: BaseViewController {
         self.view.endEditing(true)
     }
     @IBAction func registerAccountPressed(_ sender: Any) {
-        
+        checkValidFields()
+    }
     
-        if userNameTextField.text == "" as! String || passwordTextField.text == "" as! String || confirmPasswordTextField.text == "" as! String {
+    private func checkValidFields() -> Bool {
+        if (userNameTextField.text ?? "").isEmpty || (userNameTextField.text ?? "").isEmpty || (userNameTextField.text ?? "").isEmpty {
             let alert = UIAlertController(title: "Error", message: "Invalid Register", preferredStyle: .alert)
             let successAction = UIAlertAction(title: "OK", style: .default, handler: nil)
             let failAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
@@ -65,9 +67,8 @@ class RegisterViewController: BaseViewController {
             self.present(alert, animated: true, completion: nil)
             
         }
-        
+        return true
     }
-    
     
     @IBAction func signInPressed(_ sender: Any) {
         let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
